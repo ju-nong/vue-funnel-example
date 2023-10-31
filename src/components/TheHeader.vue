@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <button class="header-back" @click="router.back">
+        <button class="header-back" @click="handleBack">
             <img src="/images//ic-left-arrow.svg" alt="뒤로가기" />
         </button>
         <div class="header-title">
@@ -13,6 +13,15 @@
 import { useRouter } from "../utils";
 
 const { router, meta } = useRouter();
+
+function handleBack() {
+    router.back();
+    // const { next } = meta.value;
+
+    // if (next) {
+
+    // }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,6 +1,6 @@
 import { RouteRecordRaw } from "vue-router";
 
-import { Main, Step1, Step2, Step3, Step4 } from "../../pages/pay";
+import { Main, Completed, Step1, Step2, Step3, Step4 } from "../../pages/pay";
 
 const routes: RouteRecordRaw[] = [
     {
@@ -8,7 +8,15 @@ const routes: RouteRecordRaw[] = [
         name: "PAY",
         component: Main,
         meta: {
-            pageName: "계좌결제",
+            pageName: "계좌 결제",
+        },
+    },
+    {
+        path: "/pay/completed",
+        name: "PAY-COMPLETED",
+        component: Completed,
+        meta: {
+            pageName: "계좌 결제 완료",
         },
     },
     {
@@ -21,10 +29,10 @@ const routes: RouteRecordRaw[] = [
     },
     {
         path: "/pay/account",
-        name: "PAY",
+        name: "PAY-ACCOUNT",
         component: Step2,
         meta: {
-            pageName: "계좌정보 입력",
+            pageName: "계좌 정보 입력",
         },
     },
     {
@@ -36,8 +44,8 @@ const routes: RouteRecordRaw[] = [
         },
     },
     {
-        path: "/pay/completed",
-        name: "PAY",
+        path: "/pay/register",
+        name: "PAY-REGISTER",
         component: Step4,
         meta: {
             pageName: "계좌 등록 완료",
