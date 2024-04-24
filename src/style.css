@@ -17,15 +17,16 @@ button {
     cursor: pointer;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.5s;
+/* 페이지 진입 및 퇴장 시의 트랜지션 정의 */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+    transition: transform 1s;
 }
-.fade-enter,
-.fade-leave-to {
-    opacity: 0;
+/* 페이지 진입 시작 시의 상태 정의 (오른쪽에서 시작) */
+.slide-fade-enter {
+    transform: translateX(100%);
 }
-.fade-enter-to,
-.fade-leave {
-    opacity: 1;
+/* 페이지 퇴장 최종 상태 정의 (왼쪽으로 종료) */
+.slide-fade-leave-to {
+    transform: translateX(-100%);
 }
